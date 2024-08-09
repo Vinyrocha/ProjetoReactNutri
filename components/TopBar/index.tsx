@@ -6,7 +6,7 @@ import { TopBarProps } from './interfaces';
 
 
 import BackIcon from '../../src/assets/back.svg';
-import CheckIcon from '../../src/assets/state-layer.svg';
+import CheckIcon from '../../src/assets/check.svg';
 
 const TopBar: React.FC<TopBarProps> = ({ title, onBackPress, onCheckPress }) => { 
     return (
@@ -15,11 +15,11 @@ const TopBar: React.FC<TopBarProps> = ({ title, onBackPress, onCheckPress }) => 
         <SafeAreaView style={styles.safearea}>  
             <View style={styles.container}>
             <TouchableOpacity onPress={onBackPress} style={styles.iconButton}>
-                <BackIcon width={32} height={32} />
+                <BackIcon style={styles.icon} />
             </TouchableOpacity> 
             <Text style={styles.title}>{title}</Text>
             <TouchableOpacity onPress={onCheckPress} style={styles.iconButton}>
-                <CheckIcon  color="#000"/>
+                <CheckIcon  style={styles.icon} color='#000000'/>
             </TouchableOpacity>
             </View>
         </SafeAreaView>

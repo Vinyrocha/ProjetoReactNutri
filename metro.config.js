@@ -9,7 +9,9 @@ const config = {
   resolver: {
     assetExts: defaultConfig.resolver.assetExts.filter(ext => ext !== 'svg'),
     sourceExts: [...defaultConfig.resolver.sourceExts, 'svg']
-  }
+  },
+  watchFolders: [__dirname],
+  watchman: false // Explicitly disable Watchman
 };
 
 module.exports = mergeConfig(defaultConfig, config);

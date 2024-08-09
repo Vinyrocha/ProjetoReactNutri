@@ -2,8 +2,12 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import TopBar from './components/TopBar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import NavigationBar from './components/NavigationBar';
+
 
 function App() {
+  
+    
   const handleBackPress = () => {
     console.log('Back button pressed');
   };
@@ -12,10 +16,19 @@ function App() {
     console.log('Check button pressed');
   };
 
-  return ( <SafeAreaProvider>  
-    <View style={styles.container}>
-      <TopBar title="Adicionar plano de treino" onBackPress={handleBackPress} onCheckPress={handleCheckPress} />
-    </View></SafeAreaProvider>
+
+
+  return ( 
+    <SafeAreaProvider>  
+      <View style={styles.container}>
+        <TopBar 
+          title="Adicionar plano de treino"
+          onBackPress={handleBackPress}
+          onCheckPress={handleCheckPress}
+        />
+      </View>
+      <NavigationBar />
+    </SafeAreaProvider>
   );
 }
 

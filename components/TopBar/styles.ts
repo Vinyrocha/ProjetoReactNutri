@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   icon: {
-    width: 24,
-    height: 24,
+    width: 52,
+    height: 52,
   },
   iconButton: {
     padding: 10,
